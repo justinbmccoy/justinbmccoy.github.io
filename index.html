@@ -31,79 +31,36 @@
         }
     }
 
-    h1, h2, h3, h4, h5, h6 {
-        color: {color:Header Text};
+    h1 {
+        color: #CD5C5C;
         font-family: {text:Sans Font Stack}, sans-serif;
         font-weight: {select:Header Weight};
+    }
+    
+      h2 {
+        color: #367987;
+        font-family: {text:Sans Font Stack}, sans-serif;
+        font-weight: {select:Header Weight};
+    }
+    
+    pages {
+        color: #367987;
+        font-family: {text:Sans Font Stack}, sans-serif;
+        font-weight: {select:Header Weight};
+        text-align: center;
+        align-content: center
     }
 
     a {
         color: #367987;
     }
 
-a:hover{
-color:#CD5C5C;
-text-decoration:none;
-transition:color .2s,.2s;
-}
+    a:hover{
+        color:#CD5C5C;
+        text-decoration:none;
+        transition:color .2s,.2s;
+    }
 
-.siteHeader-title{
-    font-size:2.5rem
-}
-
-.siteHeader {
-padding-right:1rem;
-padding-left:.1rem;
-width:20%;
-max-width:200px;
-}
-
-.link-wrapper a{
-    font-size:1.25rem;
-    font-family:"roboto",serif;
-}
-
-.post-title{
-    font-size:1.35rem;
-    font:"roboto";
-    font-weight:lighter;
-}
-
-.siteHeader-social>li>a {
-color:RGB(57,121,134);
-}
-
-.siteHeader-social>li>a:hover{
-    color:#CD5C5C;
-    transition:color .2s,.2s;
-}
-
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid RGB(57,121,134);
-  margin: 1em 1rem;
-  padding: 0.75em 1em;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 3.5rem;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
-.quote-wrapper blockquote>p{
-    font-size:0.95rem;
-}
-
-blockquote p {
-  display: inline;
-  font-size:0.85rem;
-  
-}
     </style>
 
 </head>
@@ -112,11 +69,19 @@ blockquote p {
 <body>
     
     
-            <h1 class="siteHeader-title">
-                <a href="/">Justin B McCoy</a>
+            <h1>
+                <a href="http://www.justinbmccoy.com/" style="color:#CD5C5C">Justin B. McCoy</a>
             </h1>
-            <p class="siteHeader-description">Description</p>
-            <div class="screen"></div>
+            <pages>
+                <a href="blog.justinbmccoy.com">Blog</a>
+                 | 
+                <a href="google.com">Description 2</a>
+            
+            
+            </pages>
+            <div class="screen">
+                test
+            </div>
 
 
 </body>
