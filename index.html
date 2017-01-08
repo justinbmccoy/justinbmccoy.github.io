@@ -9,93 +9,20 @@
     </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color:Body Text" content="#222">
-    <meta name="color:Header Text" content="#000">
-    <meta name="select:Sidebar Alignment" content="" title="Left">
-    <meta name="select:Sidebar Alignment" content="is-alignedRight" title="Right">
-    <meta name="select:Header Weight" content="700" title="Bold">
-    <meta name="select:Header Weight" content="500" title="Medium">
-    <meta name="select:Header Weight" content="400" title="Normal">
-    <meta name="select:Header Weight" content="300" title="Light">
-    <meta name="select:Avatar Shape" content="u-square" title="Square">
-    <meta name="select:Avatar Shape" content="u-circle" title="Circle">
-    <meta name="select:Avatar Shape" content="u-rounded" title="Rounded">
-    <meta name="select:Avatar Size" content="128px" title="Large">
-    <meta name="select:Avatar Size" content="96px" title="Medium">
-    <meta name="select:Avatar Size" content="64px" title="Small">
-    <meta name="select:Pagination Mode" content="previousNext" title="Previous/Next">
-    <meta name="select:Pagination Mode" content="infiniteScroll" title="Infinite Scroll">
-    <meta name="select:Pagination Mode" content="loadMoreButton" title="Load More Button">
-    <meta name="select:Following Avatar Shape" content="u-square" title="Square">
-    <meta name="select:Following Avatar Shape" content="u-circle" title="Circle">
-    <meta name="select:Following Avatar Shape" content="u-rounded" title="Rounded">
-    <meta name="if:Show Search" content="1">
-    <meta name="if:Show Pages" content="1">
-    <meta name="if:Show Social Nav" content="1">
-    <meta name="if:Show Following" content="1">
-    <meta name="if:Show Likes" content="1">
-    <meta name="if:Show Tags" content="1">
-    <meta name="if:Show Reblog Button" content="1">
-    <meta name="if:Show Like Button" content="1">
-    <meta name="if:Show Share Button" content="1">
-    <meta name="if:Show Date" content="1">
-    <meta name="if:Show Notes" content="1">
-    <meta name="if:Photoset Carousel" content="1">
-    <meta name="if:Sticky Sidebar" content="0">
-    <meta name="if:Show RSS" content="0">
-    <meta name="text:Email" content="">
-    <meta name="text:Facebook" content="">
-    <meta name="text:Google Plus" content="">
-    <meta name="text:Twitter" content="">
-    <meta name="text:LinkedIn" content="">
-    <meta name="text:Github" content="">
-    <meta name="text:Bitbucket" content="">
-    <meta name="text:CodePen" content="">
-    <meta name="text:StackOverflow" content="">
-    <meta name="text:Behance" content="">
-    <meta name="text:Dribbble" content="">
-    <meta name="text:deviantART" content="">
-    <meta name="text:Pinterest" content="">
-    <meta name="text:Flickr" content="">
-    <meta name="text:Instagram" content="">
-    <meta name="text:YouTube" content="">
-    <meta name="text:Vimeo" content="">
-    <meta name="text:Vine" content="">
-    <meta name="text:Spotify" content="">
-    <meta name="text:Soundcloud" content="">
-    <meta name="text:Foursquare" content="">
-    <meta name="text:Yelp" content="">
-    <meta name="text:StackExchange" content="">
-    <meta name="text:Pages Header" content="Pages">
-    <meta name="text:Social Nav Header" content="Connect">
-    <meta name="text:Following Header" content="Following">
-    <meta name="text:Likes Header" content="Likes">
-    <meta name="text:Base Font Size" content="93.75%">
-    <meta name="text:Base Line Height" content="1.5">
-    <meta name="text:Serif Font Stack" content="Georgia">
-    <meta name="text:Sans Font Stack" content="Roboto">
-    <meta name="text:Monospace Font Stack" content="Courier">
-    <meta name="text:Google Web Font" content="Roboto">
-    <meta name="text:Google Analytics ID" content="">
-    <meta name="text:Disqus Shortname" content="">
-
     <link rel="shortcut icon" href="{later}">
     <link rel="apple-touch-icon" href="{later}">
     <link rel="alternate" type="application/rss+xml" href="{later}">
-    
-    {block:ifGoogleWebFont}
     <link href='//fonts.googleapis.com/css?family=Abel:400' rel='stylesheet' type='text/css'>
-    {/block:ifGoogleWebFont}
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/fk7a7ro/eB4nf0454/main.min.css">
+    
     <style>
-
-    /* CUSTOM STYLES */
     
     html {
-        background-color: {BackgroundColor};
-        color: {color:Body Text};
-        font: 93.75%/{text:Base Line Height} {text:Serif Font Stack}, serif;
-        -webkit-font-smoothing: antialiased;
+        background-color: #ffffff;
+        color: #367987;
+        font-family: sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
     }
 
     @media screen and (min-width: 832px) {
@@ -111,134 +38,86 @@
     }
 
     a {
-        color: {AccentColor};
+        color: #367987;
     }
 
-    .searchContainer {
-        background-color: {BackgroundColor};
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
+a:hover{
+color:#CD5C5C;
+text-decoration:none;
+transition:color .2s,.2s;
+}
 
-    .siteHeader {
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
+.siteHeader-title{
+    font-size:2.5rem
+}
 
-    {block:ifStickySidebar}
-    @media screen and (min-width: 832px) {
-        .siteHeader {
-            position: fixed;
-        }   
-    }
-    {/block:ifStickySidebar}
+.siteHeader {
+padding-right:1rem;
+padding-left:.1rem;
+width:20%;
+max-width:200px;
+}
 
-    .siteHeader-avatar {
-        width: {select:Avatar Size};
-    }
+.link-wrapper a{
+    font-size:1.25rem;
+    font-family:"roboto",serif;
+}
 
-    .siteHeader-searchToggle {
-        color: {AccentColor};
-    }
+.post-title{
+    font-size:1.35rem;
+    font:"roboto";
+    font-weight:lighter;
+}
 
-    .siteHeader-social > li > a:hover {
-        color: {AccentColor};
-    }
+.siteHeader-social>li>a {
+color:RGB(57,121,134);
+}
 
-    .post-footer {
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
+.siteHeader-social>li>a:hover{
+    color:#CD5C5C;
+    transition:color .2s,.2s;
+}
 
-    .post-like .heart-filled {
-        color: {AccentColor};
-    }
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid RGB(57,121,134);
+  margin: 1em 1rem;
+  padding: 0.75em 1em;
+  quotes: "\201C""\201D""\2018""\2019";
+}
 
-    .post-shareButtons {
-        background-color: {BackgroundColor};
-    }
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 3.5rem;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
 
-    .post-shareButtons a:hover {
-        background-color: {AccentColor};
-    }
+.quote-wrapper blockquote>p{
+    font-size:0.95rem;
+}
 
-    .post-showComments {
-        color: {AccentColor};
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
-
-    .audio-info {
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
-
-    .chat-list {
-        font-family: {text:Monospace Font Stack}, monospace;
-    }
-
-    {block:ifPhotosetCarousel}
-    .photoset-wrapper {
-        cursor: pointer;
-    }
-
-    .photoset-wrapper > ul {
-        display: block;
-        list-style: none;
-        padding: 0;
-        transition: -webkit-transform .3s;
-        transition:     -ms-transform .3s;
-        transition:         transform .3s;
-        -webkit-transform: translate(0,0);
-            -ms-transform: translate(0,0);
-                transform: translate(0,0);
-        width: 9999px;
-    }
-
-    .photoset-wrapper > ul > li {
-        float: left;
-        display: block;
-    }
-
-    .photoset-wrapper img {
-        display: block;
-        width: 99.9%;
-    }
-    {/block:ifPhotosetCarousel}
-
-    .photoset-info {
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
-
-    .siteFooter {
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
-
-    .siteFooter a:hover {
-        color: {AccentColor};
-    }
-
-    .siteFooter-loadMore {
-        color: {AccentColor};
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
-
-    .results {
-        font-family: {text:Sans Font Stack}, sans-serif;
-    }
-
-    .modal {
-        background-color: {BackgroundColor};
-    }
-
-    {CustomCSS}
-
+blockquote p {
+  display: inline;
+  font-size:0.85rem;
+  
+}
     </style>
 
 </head>
 
 
 <body>
-            {block:ShowTitle}
+    
+    
             <h1 class="siteHeader-title">
                 <a href="/">Justin B McCoy</a>
             </h1>
             <p class="siteHeader-description">Description</p>
             <div class="screen"></div>
+
+
 </body>
 </html>
