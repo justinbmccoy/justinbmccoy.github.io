@@ -1,8 +1,251 @@
 <!DOCTYPE html>
 <html>
-  <body>
-<h1>Justin was here</h1>
-    <p>test, 1, 2. test, 1, 2.</p>
-    <p style=font-color:"red">test 3, 4</p>
-  </body>
+<head>
+
+    <meta charset="UTF-8">
+    <title>
+        {Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}
+    </title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {block:Hidden}
+    <!-- THEME OPTIONS -->
+    <meta name="color:Body Text" content="#222">
+    <meta name="color:Header Text" content="#000">
+    <meta name="select:Sidebar Alignment" content="" title="Left">
+    <meta name="select:Sidebar Alignment" content="is-alignedRight" title="Right">
+    <meta name="select:Header Weight" content="700" title="Bold">
+    <meta name="select:Header Weight" content="500" title="Medium">
+    <meta name="select:Header Weight" content="400" title="Normal">
+    <meta name="select:Header Weight" content="300" title="Light">
+    <meta name="select:Avatar Shape" content="u-square" title="Square">
+    <meta name="select:Avatar Shape" content="u-circle" title="Circle">
+    <meta name="select:Avatar Shape" content="u-rounded" title="Rounded">
+    <meta name="select:Avatar Size" content="128px" title="Large">
+    <meta name="select:Avatar Size" content="96px" title="Medium">
+    <meta name="select:Avatar Size" content="64px" title="Small">
+    <meta name="select:Pagination Mode" content="previousNext" title="Previous/Next">
+    <meta name="select:Pagination Mode" content="infiniteScroll" title="Infinite Scroll">
+    <meta name="select:Pagination Mode" content="loadMoreButton" title="Load More Button">
+    <meta name="select:Following Avatar Shape" content="u-square" title="Square">
+    <meta name="select:Following Avatar Shape" content="u-circle" title="Circle">
+    <meta name="select:Following Avatar Shape" content="u-rounded" title="Rounded">
+    <meta name="if:Show Search" content="1">
+    <meta name="if:Show Pages" content="1">
+    <meta name="if:Show Social Nav" content="1">
+    <meta name="if:Show Following" content="1">
+    <meta name="if:Show Likes" content="1">
+    <meta name="if:Show Tags" content="1">
+    <meta name="if:Show Reblog Button" content="1">
+    <meta name="if:Show Like Button" content="1">
+    <meta name="if:Show Share Button" content="1">
+    <meta name="if:Show Date" content="1">
+    <meta name="if:Show Notes" content="1">
+    <meta name="if:Photoset Carousel" content="1">
+    <meta name="if:Sticky Sidebar" content="0">
+    <meta name="if:Show RSS" content="0">
+    <meta name="text:Email" content="">
+    <meta name="text:Facebook" content="">
+    <meta name="text:Google Plus" content="">
+    <meta name="text:Twitter" content="">
+    <meta name="text:LinkedIn" content="">
+    <meta name="text:Github" content="">
+    <meta name="text:Bitbucket" content="">
+    <meta name="text:CodePen" content="">
+    <meta name="text:StackOverflow" content="">
+    <meta name="text:Behance" content="">
+    <meta name="text:Dribbble" content="">
+    <meta name="text:deviantART" content="">
+    <meta name="text:Pinterest" content="">
+    <meta name="text:Flickr" content="">
+    <meta name="text:Instagram" content="">
+    <meta name="text:YouTube" content="">
+    <meta name="text:Vimeo" content="">
+    <meta name="text:Vine" content="">
+    <meta name="text:Spotify" content="">
+    <meta name="text:Soundcloud" content="">
+    <meta name="text:Foursquare" content="">
+    <meta name="text:Yelp" content="">
+    <meta name="text:StackExchange" content="">
+    <meta name="text:Pages Header" content="Pages">
+    <meta name="text:Social Nav Header" content="Connect">
+    <meta name="text:Following Header" content="Following">
+    <meta name="text:Likes Header" content="Likes">
+    <meta name="text:Base Font Size" content="93.75%">
+    <meta name="text:Base Line Height" content="1.5">
+    <meta name="text:Serif Font Stack" content="Georgia">
+    <meta name="text:Sans Font Stack" content="Roboto">
+    <meta name="text:Monospace Font Stack" content="Courier">
+    <meta name="text:Google Web Font" content="Roboto">
+    <meta name="text:Google Analytics ID" content="">
+    <meta name="text:Disqus Shortname" content="">
+    {/block:Hidden}
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    
+    {block:ifGoogleWebFont}
+    <link href='//fonts.googleapis.com/css?family={text:Google Web Font}:400,{select:Header Weight}' rel='stylesheet' type='text/css'>
+    {/block:ifGoogleWebFont}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://static.tumblr.com/fk7a7ro/eB4nf0454/main.min.css" rel="stylesheet">
+
+    <style>
+
+    /* CUSTOM STYLES */
+    
+    html {
+        background-color: {BackgroundColor};
+        color: {color:Body Text};
+        font: 93.75%/{text:Base Line Height} {text:Serif Font Stack}, serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    @media screen and (min-width: 832px) {
+        html {
+            font-size: {text:Base Font Size};
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: {color:Header Text};
+        font-family: {text:Sans Font Stack}, sans-serif;
+        font-weight: {select:Header Weight};
+    }
+
+    a {
+        color: {AccentColor};
+    }
+
+    .searchContainer {
+        background-color: {BackgroundColor};
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .siteHeader {
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    {block:ifStickySidebar}
+    @media screen and (min-width: 832px) {
+        .siteHeader {
+            position: fixed;
+        }   
+    }
+    {/block:ifStickySidebar}
+
+    .siteHeader-avatar {
+        width: {select:Avatar Size};
+    }
+
+    .siteHeader-searchToggle {
+        color: {AccentColor};
+    }
+
+    .siteHeader-social > li > a:hover {
+        color: {AccentColor};
+    }
+
+    .post-footer {
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .post-like .heart-filled {
+        color: {AccentColor};
+    }
+
+    .post-shareButtons {
+        background-color: {BackgroundColor};
+    }
+
+    .post-shareButtons a:hover {
+        background-color: {AccentColor};
+    }
+
+    .post-showComments {
+        color: {AccentColor};
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .audio-info {
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .chat-list {
+        font-family: {text:Monospace Font Stack}, monospace;
+    }
+
+    {block:ifPhotosetCarousel}
+    .photoset-wrapper {
+        cursor: pointer;
+    }
+
+    .photoset-wrapper > ul {
+        display: block;
+        list-style: none;
+        padding: 0;
+        transition: -webkit-transform .3s;
+        transition:     -ms-transform .3s;
+        transition:         transform .3s;
+        -webkit-transform: translate(0,0);
+            -ms-transform: translate(0,0);
+                transform: translate(0,0);
+        width: 9999px;
+    }
+
+    .photoset-wrapper > ul > li {
+        float: left;
+        display: block;
+    }
+
+    .photoset-wrapper img {
+        display: block;
+        width: 99.9%;
+    }
+    {/block:ifPhotosetCarousel}
+
+    .photoset-info {
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .siteFooter {
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .siteFooter a:hover {
+        color: {AccentColor};
+    }
+
+    .siteFooter-loadMore {
+        color: {AccentColor};
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .results {
+        font-family: {text:Sans Font Stack}, sans-serif;
+    }
+
+    .modal {
+        background-color: {BackgroundColor};
+    }
+
+    {CustomCSS}
+
+    </style>
+
+</head>
+
+
+<body>
+            {block:ShowTitle}
+            <h1 class="siteHeader-title">
+                <a href="/">Justin B McCoy</a>
+            </h1>
+            <p class="siteHeader-description">Description</p>
+            <div class="screen"></div>
+</body>
 </html>
